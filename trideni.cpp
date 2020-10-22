@@ -28,7 +28,7 @@ while (getline(sezbam_slov, line)) {}
 
 using namespace std;
 
-int DotazNaVypsani () {
+int zeptej_se_jestli_vypsat () {
 	int d;
 	
 	while (d != 0 || d !=1 ) {
@@ -42,7 +42,7 @@ int DotazNaVypsani () {
 }
 
 
-void vypsani(seznam_slov & serazeni )
+void vypis(seznam_slov & serazeni )
 {
 	int i;
 	i=0;
