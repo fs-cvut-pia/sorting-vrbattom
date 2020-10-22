@@ -7,7 +7,7 @@ using namespace std;
 
 void nacti (string nazev, seznam_slov & jmena) {
 
-	string line;
+	std::string line;
     ifstream myfile;
     myfile.open("jmena.dat");
 
@@ -15,20 +15,27 @@ void nacti (string nazev, seznam_slov & jmena) {
       perror("Error open");
       exit(EXIT_FAILURE);
    }
-    while(getline(myfile, line)) {}
-/*
-vector<string> jmena; 
-string line;
-int i=0;
+    while(getline(myfile, line)) {
+    	jmena.push_back(line);
+	}
 
-ifstream seznam_slov;
-soubor.open(jmena.dat);
-
-while (getline(sezbam_slov, line)) {}
-*/
 }	
 
 void serad(seznam_slov & jmena) {
+	std::string tmp;
+	bool bylo_prohozeno;
+	do{
+		bylo_prohozeno = false;
+		for (int i=1; i<jmena.size(); i++) {
+			if (jmena[i].compare(jmena[i-1]) < 0){
+				tmp = jmena [i];
+				jmena[i] = jmena [i-1];
+				jmena[i-1]= tmp;
+				bylo_prohozeno = true;
+			}
+		}
+	} while (bylo_prohozeno);
+	
 }
 
 bool zeptej_se_jestli_vypsat() {
@@ -43,8 +50,7 @@ bool zeptej_se_jestli_vypsat() {
 	else if (dotaz==0) return false;
 	else cout << "Spatny vstup" << endl;
 	}
-	
-		return d;
+
 }
 
 
@@ -55,11 +61,8 @@ void vypis(seznam_slov const& jmena)
 	i=0;
 	for (i;i<jmena.size();i++)
 	{
-		cout << jmena[i];
+		cout << jmena[i] << endl;
 	}
 }
 
-
-
-	
 
