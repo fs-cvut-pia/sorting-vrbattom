@@ -65,4 +65,8 @@ void vypis(seznam_slov const& jmena)
 	}
 }
 
-
+/*
+Nacteno 4275 slov.
+Serazuji slova ...
+Hotovo. Serazeni trvalo 0.591 sekundy.
+*/
