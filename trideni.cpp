@@ -42,5 +42,16 @@ int DotazNaVypsani () {
 }
 
 
+void vypsani(seznam_slov & serazeni )
+{
+	int i;
+	i=0;
+	for (i<serazeni.size)
+	{
+		cout << serazeni[i];
+	}
+}
+
+
 	
 
