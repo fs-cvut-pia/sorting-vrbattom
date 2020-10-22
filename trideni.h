@@ -10,4 +10,4 @@ void nacti (std::string nazev, seznam_slov & jmena);
 
 int DotazNaVypsani();
 	
-void vypsani(seznam_slov);
+void vypsani(seznam_slov & serazeni);
