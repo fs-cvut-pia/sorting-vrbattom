@@ -1,9 +1,11 @@
+
+
 #include "trideni.h"
 #include <vector>
 
 using namespace std;
 
-void nacti (std::string nazev, seznam_slov & jmena) {
+void nacti (string nazev, seznam_slov & jmena) {
 
 	string line;
     ifstream myfile;
@@ -26,31 +28,37 @@ while (getline(sezbam_slov, line)) {}
 */
 }	
 
-using namespace std;
+void serad(seznam_slov & jmena) {
+}
 
-int zeptej_se_jestli_vypsat () {
-	int d;
+bool zeptej_se_jestli_vypsat() {
+	int dotaz;
 	
-	while (d != 0 || d !=1 ) {
+	while (true ) {
 	cout << "Chcete vypsat poradi jmen?"<< endl;
 	cout << "Pro vypsani stisknete 1"<< endl;
 	cout << "Pro pokracovani bez vypsani stiknete 0"<< endl;
-	cin >> d;
+	cin >> dotaz;
+	if (dotaz==1) return true;
+	else if (dotaz==0) return false;
+	else cout << "Spatny vstup" << endl;
 	}
 	
 		return d;
 }
 
 
-void vypis(seznam_slov & serazeni )
+void vypis(seznam_slov const& jmena)
+
 {
 	int i;
 	i=0;
-	for (i<serazeni.size)
+	for (i;i<jmena.size();i++)
 	{
-		cout << serazeni[i];
+		cout << jmena[i];
 	}
 }
+
 
 
 	
